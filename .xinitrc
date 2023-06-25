@@ -34,4 +34,4 @@ fi
 
 feh $HOME/.config/wallpapers/panda.jpg --bg-fill --no-fehbg &
 picom --no-fading-openclose &
-exec dwm
+exec startdwm
