@@ -2,8 +2,6 @@
 
 stow -t $HOME/.config .config
 stow -t $HOME/.local .local
-
-stow -t $HOME .Xresources
-stow -t $HOME .xinitrc
+stow -t $HOME home
 
 sudo stow -t /etc/X11/xorg.conf.d xorg.conf.d
