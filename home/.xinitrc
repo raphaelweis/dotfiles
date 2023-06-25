@@ -32,6 +32,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# to correctly kill x session
+export XSESSION_PID="$$"
+
 feh $HOME/.config/wallpapers/panda.jpg --bg-fill --no-fehbg &
 picom --no-fading-openclose &
 exec startdwm
