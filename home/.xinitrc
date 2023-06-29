@@ -37,4 +37,5 @@ export XSESSION_PID="$$"
 
 feh $HOME/.config/wallpapers/panda.jpg --bg-fill --no-fehbg &
 picom --no-fading-openclose &
+dropbox &
 exec startdwm
