@@ -40,4 +40,5 @@ picom --no-fading-openclose &
 sxhkd &
 dunst &
 dropbox &
+dwmblocks &
 exec startdwm
