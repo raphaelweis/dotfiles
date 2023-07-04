@@ -1,16 +1,33 @@
 #!/bin/bash
 
-# Session environment variables
+# XDG variables
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+# Default Programs
+export EDITOR="nvim"
+export TERMINAL="st"
+export BROWSER="chromium"
+export PDFVIEWER="zathura"
+
+# program config locations
+export VIMRC="$XDG_CONFIG_HOME/nvim/init.lua"
+export VIMCONFDIR="$XDG_CONFIG_HOME/nvim"
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export GOPATH="$HOME/.go"
 export COMPOSER_HOME="$HOME/.composer"
-export ANDROID_HOME="/opt/android-sdk"
 export PERL5LIB="$HOME/.perl5/lib/perl5"
-export PATH="$PATH:$GOPATH/bin:$HOME/.local/bin:$HOME/.composer/vendor/bin:$(ruby -e 'puts Gem.user_dir')/bin:$HOME/.perl5/bin:$XDG_DATA_HOME/JetBrains/Toolbox/scripts:$HOME/.cargo/bin:$HOME/.dev/flutter/bin"
 export MANPATH="$MANPATH:$HOME/.perl5/man"
 
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+# PATH Environment Variable
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$XDG_DATA_HOME/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+export PATH="$PATH:$HOME/.perl5/bin"
+export PATH="$PATH:$XDG_DATA_HOME/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Misc
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
