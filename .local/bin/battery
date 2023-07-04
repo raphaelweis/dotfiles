@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Get the battery level as a percentage, and the battery status as a string
-battery_level=$(acpi -b | grep -P -o '[0-9]+(?=%)')
-charging_status=$(acpi -b | grep -P -o '(?<=, )[A-Za-z]+')
+battery_level=$(cat /sys/class/power_supply/BAT0/capacity)
+charging_status=$(cat /sys/class/power_supply/BAT0/status)
 
 # Define the battery icon based on the battery level, and the battery status
 battery_icon=""
