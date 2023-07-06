@@ -40,5 +40,6 @@ picom --no-fading-openclose &
 sxhkd &
 dunst &
 dropbox &
+xremap $XDG_CONFIG_HOME/xremap/config.yml &
 dwmblocks &
 exec startdwm
