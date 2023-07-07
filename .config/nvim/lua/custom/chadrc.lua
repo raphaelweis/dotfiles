@@ -1,7 +1,9 @@
 -- options
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.relativenumber = true
 vim.opt.colorcolumn = "120"
-
+vim.opt.wrap = false
 ---@type ChadrcConfig 
 local M = {}
 M.mappings = require "custom.mappings"
