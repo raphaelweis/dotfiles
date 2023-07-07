@@ -27,7 +27,7 @@ XF86AudioMute
 
 # application keys
 super + Return
-  $TERMINAL $TERMINAL_ARGS
+  eval $TERMINAL $TERMINAL_ARGS
 
 super + q
   $BROWSER
