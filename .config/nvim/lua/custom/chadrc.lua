@@ -1,3 +1,7 @@
+-- options
+vim.opt.relativenumber = true
+vim.opt.colorcolumn = "120"
+
 ---@type ChadrcConfig 
 local M = {}
 M.mappings = require "custom.mappings"
@@ -17,4 +21,3 @@ M.ui = {
   },
 }
 return M
-

@@ -52,6 +52,10 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = require 'custom.configs.nvim-cmp'
+  }
 }
 
 return plugins
