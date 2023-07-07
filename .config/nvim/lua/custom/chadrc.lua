@@ -5,9 +5,9 @@ M.plugins = "custom.plugins"
 
 M.ui = {
   theme = 'gruvbox',
-  -- nvdash = {
-  --   load_on_startup = true
-  -- }
+  nvdash = {
+    load_on_startup = true
+  }
 }
 return M
 
