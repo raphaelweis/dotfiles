@@ -10,4 +10,5 @@ local opts = {
     ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item.
   }),
 }
+
 return opts

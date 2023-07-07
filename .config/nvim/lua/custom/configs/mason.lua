@@ -18,4 +18,5 @@ local opts = {
     "sqls",
   },
 }
+
 return opts

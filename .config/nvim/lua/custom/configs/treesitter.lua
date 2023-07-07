@@ -14,7 +14,7 @@ local opts = {
     "php",
     "c",
     "rust",
-    "zig"
+    "zig",
   },
 }
 
