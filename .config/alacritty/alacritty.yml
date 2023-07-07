@@ -1,0 +1,55 @@
+# Colors (One Dark)
+colors:
+  # Default colors
+  primary:
+    background: '#000000'
+    foreground: '#e5e5e5'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#cd0000'
+    green:   '#00cd00'
+    yellow:  '#cdcd00'
+    blue:    '#0000ee'
+    magenta: '#cd00cd'
+    cyan:    '#00cdcd'
+    white:   '#e5e5e5'
+
+  # Bright colors
+  bright:
+    black:   '#7f7f7f'
+    red:     '#ff0000'
+    green:   '#00ff00'
+    yellow:  '#ffff00'
+    blue:    '#5c5cff'
+    magenta: '#ff00ff'
+    cyan:    '#00ffff'
+    white:   '#ffffff'
+
+cursor:
+  style:
+    blinking: Off
+    shape: Block
+draw_bold_text_with_bright_colors: true
+font:
+  bold:
+    family: "JetBrainsMonoNL NF"
+    style: Bold
+  bold_italic:
+    family: "JetBrainsMonoNL NF"
+    style: BoldItalic
+  italic:
+    family: "JetBrainsMonoNL NF"
+    style: MediumItalic
+  normal:
+    family: "JetBrainsMonoNL NF"
+    style: Regular
+  size: 16
+window:
+  opacity: 0.8
+  padding:
+    x: 5
+    y: 5
+env:
+  WINIT_X11_SCALE_FACTOR: "1"
