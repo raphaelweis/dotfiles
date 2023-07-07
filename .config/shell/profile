@@ -7,9 +7,11 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # Default Programs
 export EDITOR="nvim"
-export TERMINAL="st"
+export TERMINAL="alacritty"
+export TERMINAL_ARGS="-e tmux"
 export BROWSER="chromium"
 export PDFVIEWER="zathura"
+export FILE_EXPLORER="nautilus"
 
 # program config locations
 export VIMRC="$XDG_CONFIG_HOME/nvim/init.lua"

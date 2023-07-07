@@ -24,3 +24,13 @@ XF86AudioLowerVolume
 
 XF86AudioMute
 	changevolume mute
+
+# application keys
+super + Return
+  $TERMINAL $TERMINAL_ARGS
+
+super + q
+  $BROWSER
+
+super + e
+  $FILE_EXPLORER
