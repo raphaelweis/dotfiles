@@ -2,10 +2,11 @@
     monitor = 0
     follow = mouse
     width = 350
-    offset = 10x40
+    offset = 20x45
     progress_bar = true
     progress_bar_height = 10
-    progress_bar_frame_width = 1
+    progress_bar_frame_width = 0
+    progress_bar_frame_color = #ffffff
     progress_bar_min_width = 150
     progress_bar_max_width = 400
     indicate_hidden = yes
@@ -14,19 +15,21 @@
     padding = 15
     horizontal_padding = 15
     text_icon_padding = 15
-    frame_width = 2
-    frame_color = "#9399b2"
+    frame_width = 1
+    frame_color = "#ffa500"
+    transparency = 20
+    corner_radius = 5
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = JetBrains Mono Nerd Font Medium 10
+    font = JetBrains Mono Nerd Font Medium 12
     line_height = 0
     markup = full
     format = "<span weight='bold'>%s</span>\n%b"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
-    word_wrap = yes
+    word_wrap = no
     ellipsize = middle
     ignore_newline = no
     stack_duplicates = true
@@ -35,7 +38,7 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    icon_path = /home/raphaelw/.local/share/icons/dunst
+    icon_path = $XDG_DATA_HOME/share/icons/dunst
     sticky_history = yes
     history_length = 20
     always_run_script = true
@@ -52,18 +55,18 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#181825AA"
-    foreground = "#CDD6F4"
-    timeout = 10
+    background = "#000000"
+    foreground = "#ffffff"
+    timeout = 3
 
 [urgency_normal]
-    background = "#181825AA"
-    foreground = "#CDD6F4"
-    timeout = 10
+    background = "#000000"
+    foreground = "#ffffff"
+    timeout = 5
 
 [urgency_critical]
     background = "#181825AA"
-    foreground = "#F38BA8"
-    frame_color = "#F38BA8"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
     timeout = -1
     format = "<b>%s</b>\n%b"
