@@ -53,6 +53,14 @@ local plugins = {
 			},
 		},
 	},
+	{
+		"akinsho/flutter-tools.nvim",
+		lazy = false,
+		dependencies = {
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+		config = true,
+	},
 }
 
 return plugins
