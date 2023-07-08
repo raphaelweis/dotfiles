@@ -5,6 +5,12 @@ local plugins = {
 		opts = require("custom.configs.treesitter"),
 	},
 	{
+		"folke/neodev.nvim",
+		config = function()
+			require("custom.configs.neodev")
+		end,
+	},
+	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			{
@@ -32,6 +38,20 @@ local plugins = {
 	{
 		"hrsh7th/nvim-cmp",
 		opts = require("custom.configs.nvim-cmp"),
+	},
+	{
+		"mfussenegger/nvim-dap",
+		config = function()
+			require("custom.configs.nvim-dap")
+		end,
+		dependencies = {
+			{
+				"rcarriga/nvim-dap-ui",
+				config = function()
+					require("custom.configs.nvim-dap-ui")
+				end,
+			},
+		},
 	},
 }
 

@@ -16,6 +16,10 @@ M.abc = {
 		["<leader>se"] = { "<C-w>=", "Make current split windows equal in width and height" },
 		["<leader>sx"] = { "<CMD>close<CR>", "Close current window" },
 
+        ["<leader>bn"] = { "<CMD>bn<CR>", "Go to next opened buffer" },
+        ["<leader>bp"] = { "<CMD>bp<CR>", "Go to previous opened buffer" },
+        ["<leader>bx"] = { "<CMD>bd<CR>", "Close current buffer" },
+
 		["<leader>e"] = { "<CMD>NvimTreeToggle<CR>", "Toggle nvim tree" },
 
 		["<leader>ff"] = { "<CMD>Telescope find_files<CR>", "Find files with telescope" },
@@ -25,6 +29,8 @@ M.abc = {
 		["<leader>gfc"] = { "<CMD>Telescope git_bcommits<CR>", "List all git commmits only for this file, checkout selected commit",},
 		["<leader>gb"] = { "<CMD>Telescope git_branches<CR>", "List all git branches, checkout selected branch" },
 		["<leader>gs"] = { "<CMD>Telescope git_status<CR>", "List current changes per file with diff preview" },
+
+        ["<leader>d"] = { "<CMD>lua require('dapui').toggle()<CR>", "Toggle Nvim-Dap UI" }
 	},
 
 	i = {
