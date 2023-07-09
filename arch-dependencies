@@ -10,6 +10,7 @@ yay -S \
     chromium \
     composer \
     cowsay \
+    dropbox \
     feh \
     firefox \
     fzf \
@@ -30,6 +31,7 @@ yay -S \
     pulseaudio-alsa \
     pulseaudio-bluetooth \
     python \
+    python-gpgme \
     python-pip \
     ripgrep \
     ruby \
