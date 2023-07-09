@@ -11,6 +11,7 @@ yay -S \
     composer \
     cowsay \
     dropbox \
+    dunst \
     feh \
     firefox \
     fzf \
