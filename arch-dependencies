@@ -26,6 +26,7 @@ yay -S \
     neovim \
     ntfs-3g \
     obsidian \
+    pamixer \
     pavucontrol \
     picom-git \
     pulseaudio \
