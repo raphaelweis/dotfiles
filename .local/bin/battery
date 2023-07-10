@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [$HOST == "archlinux-desktop"]; then
-    exit(0) 
+if [ "$HOST" == "archlinux-desktop" ]; then
+    exit 0 
 fi
 
 # Get the battery level as a percentage, and the battery status as a string
