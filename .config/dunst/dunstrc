@@ -6,7 +6,6 @@
     progress_bar = true
     progress_bar_height = 10
     progress_bar_frame_width = 0
-    progress_bar_frame_color = #ffffff
     progress_bar_min_width = 150
     progress_bar_max_width = 400
     indicate_hidden = yes
@@ -38,7 +37,7 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    icon_path = $XDG_DATA_HOME/share/icons/dunst
+    icon_path = ~/.local/share/icons/dunst
     sticky_history = yes
     history_length = 20
     always_run_script = true
