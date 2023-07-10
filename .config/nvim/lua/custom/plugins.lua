@@ -14,15 +14,21 @@ local plugins = {
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			{
+				"williamboman/mason.nvim",
+				opts = require("custom.configs.mason"),
+			},
+			{
 				"williamboman/mason-null-ls.nvim",
 				config = function()
 					require("custom.configs.mason-null-ls")
 				end,
 			},
-			{
-				"williamboman/mason.nvim",
-				opts = require("custom.configs.mason"),
-			},
+            {
+                "williamboman/mason-nvim-dap.nvim",
+                config = function ()
+                    require("custom.configs.mason-nvim-dap")
+                end,
+            },
 			{
 				"jose-elias-alvarez/null-ls.nvim",
 				config = function()
