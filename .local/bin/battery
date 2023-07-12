@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Get the battery level as a percentage, and the battery status as a string
-if ! `cat /sys/class/power_supply/BAT0/capacity`; then
+if ! `cat /sys/class/power_supply/BAT0/capacity &>/dev/null`; then
     exit 0
 else
     battery_level=$(cat /sys/class/power_supply/BAT0/capacity)
 fi
 
-if ! `cat /sys/class/power_supply/BAT0/status`; then
+if ! `cat /sys/class/power_supply/BAT0/status &>/dev/null`; then
     exit 0
 else
     charging_status=$(cat /sys/class/power_supply/BAT0/status)
