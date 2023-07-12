@@ -16,6 +16,7 @@ local opts = {
     "jedi-language-server",
     "rust-analyzer",
     "sqls",
+    "clang-format",
   },
 }
 

@@ -21,6 +21,7 @@ M.abc = {
         ["<leader>bx"] = { "<CMD>bd<CR>", "Close current buffer" },
 
 		["<leader>e"] = { "<CMD>NvimTreeToggle<CR>", "Toggle nvim tree" },
+        ["<leader>fm"] = { "<CMD>FormatWrite<CR>", "Format and write the document" },
 
 		["<leader>ff"] = { "<CMD>Telescope find_files<CR>", "Find files with telescope" },
 		["<leader>fh"] = { "<CMD>Telescope find_files hidden=true<CR>", "Find all files with telescope" },

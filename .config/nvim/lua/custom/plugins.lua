@@ -17,12 +17,12 @@ local plugins = {
 				"williamboman/mason.nvim",
 				opts = require("custom.configs.mason"),
 			},
-            {
-                "williamboman/mason-nvim-dap.nvim",
-                config = function ()
-                    require("custom.configs.mason-nvim-dap")
-                end,
-            },
+			{
+				"williamboman/mason-nvim-dap.nvim",
+				config = function()
+					require("custom.configs.mason-nvim-dap")
+				end,
+			},
 		},
 		config = function()
 			require("plugins.configs.lspconfig")
@@ -46,6 +46,13 @@ local plugins = {
 				end,
 			},
 		},
+	},
+	{
+		"mhartington/formatter.nvim",
+		lazy = false,
+		config = function()
+			require("custom.configs.formatter")
+		end,
 	},
 	{
 		"akinsho/flutter-tools.nvim",
