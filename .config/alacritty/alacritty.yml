@@ -2,7 +2,7 @@
 colors:
   # Default colors
   primary:
-    background: '#000000'
+    background: '#282828' # this matches neovim gruvbox color
     foreground: '#e5e5e5'
 
   # Normal colors
@@ -47,7 +47,7 @@ font:
     style: Regular
   size: 16
 window:
-  opacity: 0.8
+  opacity: 1
   padding:
     x: 5
     y: 5
