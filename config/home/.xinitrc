@@ -35,7 +35,7 @@ fi
 # to correctly kill x session
 export XSESSION_PID="$$"
 
-feh $HOME/.config/wallpapers/panda.jpg --bg-fill --no-fehbg &
+feh $XDG_DATA_HOME/wallpapers --bg-fill --no-fehbg &
 picom --no-fading-openclose &
 sxhkd &
 dunst &
