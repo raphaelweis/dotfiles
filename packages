@@ -49,6 +49,7 @@ yay -S --noconfirm \
     unzip \
     wget \
     xclip \
+    xcolor \
     xorg \
     xorg-xinit \
     xremap \
