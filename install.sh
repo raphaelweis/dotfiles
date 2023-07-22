@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# start systemd services
+sudo systemctl enable --now bluetooth.service
+
+# create the necessary home directories
+#TODO
+
+# install packages from both the official and user repositories
 yay -S --noconfirm \
     alacritty \
     xorg \
@@ -32,7 +39,7 @@ yay -S --noconfirm \
     pamixer \
     pavucontrol \
     picom-git \
-    pulseaudio \
+    pipewire \
     pulseaudio-alsa \
     pulseaudio-bluetooth \
     python \
