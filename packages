@@ -55,3 +55,17 @@ yay -S --noconfirm \
     xremap \
     zoxide \
     zsh \
+
+# nvm installation
+if ! type foobar &> /dev/null; then
+    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash' && zsh && nvm install node && nvm use node
+fi
+
+# nvchad installation
+if [ ! -d "$HOME/.config/nvim" ]; then
+ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && rm -r $HOME/.config/nvim/lua/custom
+fi
+
+# xremap sudo-less setup
+echo "uinput" | sudo tee -a /etc/modules-load.d/uinput.conf
+echo 'KERNEL=="uinput", GROUP="input", MODE="0660"' | sudo tee /etc/udev/rules.d/99-input.rules
