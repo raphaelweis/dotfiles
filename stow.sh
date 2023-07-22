@@ -23,9 +23,10 @@ stow -d ./setup dunst -t ~/.config
 stow -d ./setup nvchad -t ~/.config
 stow -d ./setup sxhkd -t ~/.config
 stow -d ./setup tmux -t ~/.config
-stow -d ./setup wallpapers -t ~/.config
 stow -d ./setup xremap -t ~/.config
 stow -d ./setup zsh -t ~/.config
+
+stow -d ./setup wallpapers -t ~/.local
 
 sudo stow -d ./setup xorg.conf.d -t /etc/X11
 
