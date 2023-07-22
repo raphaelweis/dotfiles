@@ -5,7 +5,7 @@
 
 send_notification() {
 	volume=$(pamixer --get-volume)
-	dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "volume" -t 2000 "Volume: ${volume}%"
+	dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "$XDG_DATA_HOME/share/icons/dunst/volume.png" -t 2000 "Volume: ${volume}%"
 }
 
 case $1 in
@@ -22,7 +22,7 @@ down)
 mute)
 	pamixer -t
 	if eval "$(pamixer --get-mute)"; then
-		dunstify -a "changevolume" -t 2000 -r 9993 -u low -i "volume-mute" "Muted"
+		dunstify -a "changevolume" -t 2000 -r 9993 -u low -i "$XDG_DATA_HOME/share/icons/dunst/volume.png" "Muted"
 	else
 		send_notification up
 	fi
