@@ -16,6 +16,7 @@ yay -S --noconfirm \
     firefox \
     fzf \
     github-cli \
+    google-chrome \
     jdk-openjdk \
     julia \
     lsd \

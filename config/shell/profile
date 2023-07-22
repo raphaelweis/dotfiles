@@ -9,7 +9,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export TERMINAL_ARGS="-e tmux"
-export BROWSER="chromium"
+export BROWSER="firefox"
 export PDFVIEWER="zathura"
 export FILE_EXPLORER="nautilus"
 
