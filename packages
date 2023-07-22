@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yay -S \
+yay -S --noconfirm \
     alacritty \
     xorg \
     bat \
@@ -41,6 +41,7 @@ yay -S \
     ruby \
     rust \
     spotify-launcher \
+    starship \
     stow \
     sxhkd-git \
     tmux \
@@ -49,5 +50,7 @@ yay -S \
     wget \
     xclip \
     xorg \
+    xorg-xinit \
+    xremap \
     zoxide \
     zsh \
