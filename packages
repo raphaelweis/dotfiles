@@ -53,7 +53,7 @@ yay -S --noconfirm \
     xcolor \
     xorg \
     xorg-xinit \
-    xremap \
+    xremap-x11-bin \
     zoxide \
     zsh \
 
