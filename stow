@@ -1,7 +1,7 @@
 #!/bin/bash
 
-stow -t $HOME/.config .config
-stow -t $HOME/.local .local
-stow -t $HOME home
+sudo stow -d config -t /usr/share/X11 xorg.conf.d
 
-sudo stow -t /etc/X11/xorg.conf.d xorg.conf.d
+stow -d config -t $HOME home
+stow -d config -t $HOME/.config shell
+stow -d config -t $HOME/.config git
