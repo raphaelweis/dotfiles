@@ -35,6 +35,9 @@ fi
 # to correctly kill x session
 export XSESSION_PID="$$"
 
+# setup monitor correctly
+xrandr --output DP-3 --mode 3440x1440 --rate 144
+
 feh $XDG_DATA_HOME/wallpapers --bg-fill --no-fehbg &
 picom --no-fading-openclose &
 sxhkd &
