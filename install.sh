@@ -1,13 +1,11 @@
 #!/bin/bash
 
-# start systemd services
-sudo systemctl enable --now bluetooth.service
 
 # create the necessary home directories
 #TODO
 
 # install packages from both the official and user repositories
-yay -S --noconfirm \
+yay -S \
     alacritty \
     xorg \
     bat \
@@ -40,8 +38,9 @@ yay -S --noconfirm \
     pavucontrol \
     picom-git \
     pipewire \
-    pulseaudio-alsa \
-    pulseaudio-bluetooth \
+    pipewire-alsa \
+    pipewire-audio \
+    pipewire-pulse \
     python \
     python-gpgme \
     python-pip \
@@ -56,6 +55,7 @@ yay -S --noconfirm \
     ttf-jetbrains-mono-nerd \
     unzip \
     wget \
+    wireplumber \
     xclip \
     xcolor \
     xorg \
@@ -71,9 +71,13 @@ fi
 
 # nvchad installation
 if [ ! -d "$HOME/.config/nvim" ]; then
- git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && rm -r $HOME/.config/nvim/lua/custom
+    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && rm -r $HOME/.config/nvim/lua/custom
 fi
 
 # xremap sudo-less setup
-echo "uinput" | sudo tee -a /etc/modules-load.d/uinput.conf
-echo 'KERNEL=="uinput", GROUP="input", MODE="0660"' | sudo tee /etc/udev/rules.d/99-input.rules
+sudo groupadd xremap
+sudo usermod -aG xremap raphaelw
+
+# start systemd services
+sudo systemctl enable --now bluetooth.service
+systemctl --user enable --now pipewire.service

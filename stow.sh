@@ -18,6 +18,7 @@ if [ ! -d "./setup" ]; then
     git clone https://github.com/raphaelweis/zsh.git
 fi
 
+# distro agnostic config files
 stow -d ./setup alacritty -t ~/.config
 stow -d ./setup dunst -t ~/.config
 stow -d ./setup nvchad -t ~/.config
@@ -30,6 +31,7 @@ stow -d ./setup wallpapers -t ~/.local
 
 sudo stow -d ./setup xorg.conf.d -t /etc/X11
 
-# stow -d config -t $HOME home
-# stow -d config -t $HOME/.config/shell shell
-# stow -d config -t $HOME/.config/git git
+# distro specific config files
+stow -d ./config .local -t $XDG_DATA_HOME
+stow -d ./config .config -t $XDG_CONFIG_HOME
+stow -d ./config .home -t $HOME
