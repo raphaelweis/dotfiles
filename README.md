@@ -1,2 +1,2 @@
-# Debian dotfiles
-My debian dotfiles
+# ArchLinux dotfiles
+My ArchLinux dotfiles (I use Arch, btw)
