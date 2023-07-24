@@ -38,3 +38,4 @@ sudo apt install \
 	lsd \
 	sxhkd \
     stow \
+    ripgrep \
