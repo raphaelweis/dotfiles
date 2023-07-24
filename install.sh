@@ -1,83 +1,40 @@
 #!/bin/bash
 
-
-# create the necessary home directories
-#TODO
-
-# install packages from both the official and user repositories
-yay -S \
-    alacritty \
-    xorg \
-    bat \
-    bluetuith \
-    bluez \
-    bluez-utils \
-    chromium \
-    composer \
-    cowsay \
-    dropbox \
-    dunst \
-    feh \
-    firefox \
-    fzf \
-    github-cli \
-    google-chrome \
-    jdk-openjdk \
-    julia \
-    lsd \
-    luarocks \
-    man-db \
-    man-pages \
-    mpv \
-    nautilus \
-    neofetch \
-    neovim \
-    ntfs-3g \
-    obsidian \
-    pamixer \
-    pavucontrol \
-    picom-git \
-    pipewire \
-    pipewire-alsa \
-    pipewire-audio \
-    pipewire-pulse \
-    python \
-    python-gpgme \
-    python-pip \
-    ripgrep \
-    ruby \
-    rust \
-    spotify-launcher \
-    starship \
+# packages
+sudo apt install \
+	xorg \
+	libx11-dev \
+	xserver-xorg-dev \
+	xorg-dev \
+	libxext-dev \
+	libxcb1-dev \
+	libxcb-damage0-dev \
+	libxcb-dpms0-dev \
+	libxcb-xfixes0-dev \
+	libxcb-shape0-dev \
+	libxcb-render-util0-dev \
+	libxcb-render0-dev \
+	libxcb-randr0-dev \
+	libxcb-composite0-dev \
+	libxcb-image0-dev \
+	libxcb-present-dev \
+	libxcb-glx0-dev \
+	libxcb-util0-dev \
+	libpixman-1-dev \
+	libdbus-1-dev \
+	libconfig-dev \
+	libgl-dev \
+	libegl-dev \
+	libpcre2-dev \
+	libevdev-dev \
+	uthash-dev \
+	libev-dev \
+	libx11-xcb-dev \
+	mesa-utils \
+	libgl1-mesa-glx \
+	libgl1-mesa-dev \
+	meson \
+	feh \
+	lsd \
+	sxhkd \
     stow \
-    sxhkd-git \
-    tmux \
-    ttf-jetbrains-mono-nerd \
-    unzip \
-    wget \
-    wireplumber \
-    xclip \
-    xcolor \
-    xorg \
-    xorg-xinit \
-    xremap-x11-bin \
-    zoxide \
-    zsh \
-
-# nvm installation
-if ! type foobar &> /dev/null; then
-    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash' && zsh && nvm install node && nvm use node
-fi
-
-# nvchad installation
-if [ ! -d "$HOME/.config/nvim" ]; then
-    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && rm -r $HOME/.config/nvim/lua/custom
-fi
-
-# xremap sudo-less setup
-sudo groupadd xremap
-sudo usermod -aG xremap raphaelw
-
-# start systemd services
-sudo systemctl enable --now bluetooth.service
-systemctl --user enable --now pipewire.service

@@ -1,2 +1,2 @@
-# dotfiles
-My linux dotfiles repository
+# Debian dotfiles
+My debian dotfiles

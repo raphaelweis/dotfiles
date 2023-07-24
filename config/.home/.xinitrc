@@ -35,14 +35,12 @@ fi
 # to correctly kill x session
 export XSESSION_PID="$$"
 
-# setup monitor correctly
-xrandr --output DP-3 --mode 3440x1440 --rate 144
+xrandr -o 0 -s 1920x1080 -r 60
 
-feh $XDG_DATA_HOME/wallpapers --bg-fill --no-fehbg &
-picom --no-fading-openclose &
+feh $HOME/.config/wallpapers/panda.jpg --bg-fill --no-fehbg &
 sxhkd &
 dunst &
-dropbox &
-xremap $XDG_CONFIG_HOME/xremap/config.yml &
+#dropbox &
+#xremap $XDG_CONFIG_HOME/xremap/config.yml &
 dwmblocks &
 exec startdwm

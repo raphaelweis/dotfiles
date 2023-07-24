@@ -2,20 +2,19 @@
 
 if [ ! -d "./setup" ]; then
     mkdir ./setup
-    git clone https://github.com/raphaelweis/alacritty.git
-    git clone https://github.com/raphaelweis/dmenu.git
-    git clone https://github.com/raphaelweis/dunst.git
-    git clone https://github.com/raphaelweis/dwm.git
-    git clone https://github.com/raphaelweis/dwmblocks.git
-    git clone https://github.com/raphaelweis/nvchad.git
-    git clone https://github.com/raphaelweis/st.git
-    git clone https://github.com/raphaelweis/sxhkd.git
-    git clone https://github.com/raphaelweis/tmux.git
-    git clone https://github.com/raphaelweis/wallpapers.git
-    git clone https://github.com/raphaelweis/xorg.conf.d.git
-    git clone https://github.com/raphaelweis/xremap.git
-    git clone https://github.com/raphaelweis/xremap.git
-    git clone https://github.com/raphaelweis/zsh.git
+    git clone https://github.com/raphaelweis/alacritty.git ./setup/alacritty
+    git clone https://github.com/raphaelweis/dmenu.git ./setup/dmenu
+    git clone https://github.com/raphaelweis/dunst.git ./setup/dunst
+    git clone https://github.com/raphaelweis/dwm.git ./setup/dwm
+    git clone https://github.com/raphaelweis/dwmblocks.git ./setup/dwmblocks
+    git clone https://github.com/raphaelweis/nvchad.git ./setup/nvchad
+    git clone https://github.com/raphaelweis/st.git ./setup/git
+    git clone https://github.com/raphaelweis/sxhkd.git ./setup/sxhkd
+    git clone https://github.com/raphaelweis/tmux.git ./setup/tmux
+    git clone https://github.com/raphaelweis/wallpapers.git ./setup/wallpapers
+    git clone https://github.com/raphaelweis/xorg.conf.d.git ./setup/xorg.conf.d
+    git clone https://github.com/raphaelweis/xremap.git ./setup/xremap
+    git clone https://github.com/raphaelweis/zsh.git ./setup/zsh
 fi
 
 # distro agnostic config files
