@@ -64,8 +64,12 @@ yay -S \
     zsh \
 
 # nvm installation
-if ! type nvm &> /dev/null; then
-    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash' && zsh && nvm install node && nvm use node
+if [ ! -d "$HOME/.config/nvm" ] && [ ! -d "$HOME/.nvm" ]; then
+    PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash'
+    # Source the nvm script to make it available in the current shell
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    nvm install node
+    nvm use node
 fi
 
 # nvchad installation
