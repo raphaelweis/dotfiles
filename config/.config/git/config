@@ -1,9 +1,7 @@
 [merge]
-	tool = nvim
+	tool = nvimdiff
 [user]
 	name = Raphaël Weis
 	email = raphael.weis.2003@gmail.com
-[mergetool "nvim"]
-	path = nvim
 [pull]
 	rebase = false
