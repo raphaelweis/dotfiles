@@ -7,6 +7,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export CHROME_EXECUTABLE="chromium"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/Applications/android-studio/bin"
 
 export VISUAL="nvim"
 export EDITOR="nvim"
