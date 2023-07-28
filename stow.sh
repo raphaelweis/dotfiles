@@ -1,5 +1,9 @@
 #!/bin/bash
 
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local
+export XDG_CACHE_HOME=$HOME/.cache
+
 if [ ! -d "./setup" ]; then
     mkdir ./setup
     git clone https://github.com/raphaelweis/alacritty.git ./setup/alacritty
