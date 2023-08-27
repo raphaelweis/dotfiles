@@ -1,6 +1,0 @@
-#!/bin/bash
-
-while true; do
-  # log stderror to a log file
-  dwm 2> ~/.dwm.log
-done
