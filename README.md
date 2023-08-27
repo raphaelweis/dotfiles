@@ -5,24 +5,23 @@ My ArchLinux dotfiles (I use Arch, btw)
 
 ## Notable configuration steps
 
-### Xremap
+### Keyd
 
-To make xremap work, we can install one of these packages from the AUR:
-- xremap-x11-bin
-- xremap-hypr-bin
-- xremap-gnome-bin
-Depending on your environnment, you might prefer one of these packages to be able to
-set application specific remapping. If your configuration does not use application specifc
-mappings, the package you use shouldn't make a difference.
-
-To be able to function properly, xremap needs to be run with sudo, with is not very desirable for most users.
-To avoid running xremap with sudo, you can use the following udev rule:
+To set up keyd:
+- Install it from the AUR
 ```
-echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/99-input.rules
+keyd
 ```
-> Note: You need to make sure the `uinput` kernel module is loaded, otherwise this will not work!
+> Note: The following steps require root privileges
 
-After a reboot, xremap should now function properly without elevated privileges.
+- Enable the systemctl service with:
+```
+systemctl enable keyd
+```
+- reload the config (if you need to) placed in `/etc/keyd/default.conf` with:
+```
+keyd reload
+```
 
 ### Setting the GTK theme
 
