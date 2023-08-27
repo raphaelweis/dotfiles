@@ -5,12 +5,28 @@ My ArchLinux dotfiles (I use Arch, btw)
 
 ## Notable configuration steps
 
-### Setting the gtk theme
+### Vivaldi
+
+On ArchLinux, you just need to install the vivaldi package, along with these dependencies, from the AUR:
+```
+vivaldi-snapshot vivaldi-snapshot-ffmpeg-codecs
+```
+Or if you don't want to be on the absolute bleeding edge:
+```
+vivaldi vivaldi-ffmpeg-codecs
+```
+
+Note that for media playback to work you will still need the following package from the AUR.
+```
+vivaldi-update-ffmpeg-hook
+```
+
+### Setting the GTK theme
 
 If the theme is available in the AUR, install it from there, and then apply it with [nwg-look](https://github.com/nwg-piotr/nwg-look).
 Otherwise, follow these steps:
 
-The gtk theme has to be set separately for gtk3 and gtk4 applications.
+The GTK theme has to be installed separately for gtk3 and gtk4 applications.
 
 - For gtk3:
     copy your theme into the `~/.themes` directory. You may create the directory if it does exist.
@@ -36,7 +52,7 @@ Assuming that the source command is already in the shell configuration file, the
 ```
 PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash'
 ```
-We simply set PROFILE to `/dev/null` to prevent nvm from adding additional lines in a random config file.
+You simply set PROFILE to `/dev/null` to prevent nvm from adding additional lines in a random config file.
 After sourcing your shell configuration, you can now install the latest node and npm with:
 ```
 nvm install node && nvm use node
@@ -44,29 +60,29 @@ nvm install node && nvm use node
 
 ### Sddm
 
-On arch, we can install either `sddm` or `sddm-git`.
+On arch, you can install either `sddm` or `sddm-git`.
 To start using sddm, enable it with systemd:
 ```
 systemctl enable sddm.service
 ```
 Everything should now function correctly on next reboot.
 
-For theming, there are a couple dependencies that are needed. For Arch we can install:
+For theming, there are a couple dependencies that are needed. For Arch you can install:
 ```
 qt5-graphicaleffects qt5-svg qt5-quickcontrols2
 ```
 
-We can then copy the theme folder into `/usr/share/sddm/themes`. Do not forget to create
+You can then copy the theme folder into `/usr/share/sddm/themes`. Do not forget to create
 `/etc/sddm.conf.d/theme.conf` (you can name the file whatever you want) and add these 2 lines:
 ```
 [Theme]
 Current=<YOUR_SDDM_THEME>
 ```
-for example with catpuccin we can use `Current=catpuccin-mocha` (or any other flavor)
+for example with catpuccin you can use `Current=catpuccin-mocha` (or any other flavor)
 
-Depending on the theme, we might want to show a profile picture for the selected user.
+Depending on the theme, you might want to show a profile picture for the selected user.
 For that, sddm will look for a png image named `.face.icon` located in `~`.
-Additionaly, we need to grant sddm the correct access rights to this picture, which can
+Additionaly, you need to grant sddm the correct access rights to this picture, which can
 be done using these 2 commands, per the [Arch wiki](https://wiki.archlinux.org/title/SDDM#User_icon_(avatar))
 ```
 setfacl -m u:sddm:x ~/
