@@ -5,22 +5,6 @@ My ArchLinux dotfiles (I use Arch, btw)
 
 ## Notable configuration steps
 
-### Vivaldi
-
-On ArchLinux, you just need to install the vivaldi package, along with these dependencies, from the AUR:
-```
-vivaldi-snapshot vivaldi-snapshot-ffmpeg-codecs
-```
-Or if you don't want to be on the absolute bleeding edge:
-```
-vivaldi vivaldi-ffmpeg-codecs
-```
-
-Note that for media playback to work you will still need the following package from the AUR.
-```
-vivaldi-update-ffmpeg-hook
-```
-
 ### Setting the GTK theme
 
 If the theme is available in the AUR, install it from there, and then apply it with [nwg-look](https://github.com/nwg-piotr/nwg-look).
