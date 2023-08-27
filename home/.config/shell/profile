@@ -9,7 +9,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export VISUAL="nvim"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="brave"
+export BROWSER="vivaldi"
 export PDFVIEWER="zathura"
 export FILE_EXPLORER="thunar"
 
