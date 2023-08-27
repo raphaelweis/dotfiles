@@ -5,6 +5,25 @@ My ArchLinux dotfiles (I use Arch, btw)
 
 ## Notable configuration steps
 
+### Xremap
+
+To make xremap work, we can install one of these packages from the AUR:
+- xremap-x11-bin
+- xremap-hypr-bin
+- xremap-gnome-bin
+Depending on your environnment, you might prefer one of these packages to be able to
+set application specific remapping. If your configuration does not use application specifc
+mappings, the package you use shouldn't make a difference.
+
+To be able to function properly, xremap needs to be run with sudo, with is not very desirable for most users.
+To avoid running xremap with sudo, you can use the following udev rule:
+```
+echo 'KERNEL=="uinput", GROUP="input", TAG+="uaccess"' | sudo tee /etc/udev/rules.d/99-input.rules
+```
+> Note: You need to make sure the `uinput` kernel module is loaded, otherwise this will not work!
+
+After a reboot, xremap should now function properly without elevated privileges.
+
 ### Setting the GTK theme
 
 If the theme is available in the AUR, install it from there, and then apply it with [nwg-look](https://github.com/nwg-piotr/nwg-look).
