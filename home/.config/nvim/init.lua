@@ -27,6 +27,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+	'Fymyte/rasi.vim',
+	
 	-- Git related plugins
 	'tpope/vim-fugitive',
 	'tpope/vim-rhubarb',
