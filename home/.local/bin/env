@@ -61,3 +61,4 @@ help)
 	echo "use \"$0 help\" to see usage help"
 	exit 1
 	;;
+esac
