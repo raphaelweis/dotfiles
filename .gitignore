@@ -1,2 +1,4 @@
-home/.config/.config/zsh/plugins/
-home/.config/.config/tmux/plugins/
+home/.config/zsh/ohmyzsh/
+home/.config/zsh/plugins/
+home/.config/zsh/.zcompdump*
+home/.config/tmux/plugins/
