@@ -1,5 +1,5 @@
-require('mason').setup()
-require('mason-lspconfig').setup({
+require("mason").setup()
+require("mason-lspconfig").setup({
 	ensure_installed = {
 		"tsserver",
 		"html",
@@ -11,14 +11,15 @@ require('mason-lspconfig').setup({
 	},
 	automatic_installation = true,
 })
-require('mason-nvim-dap').setup({
+require("mason-nvim-dap").setup({
 	ensure_installed = {
 		"delve",
 		"cpptools",
 	},
-	handlers = {}
+	automatic_installation = true,
+	handlers = {},
 })
-require('mason-tool-installer').setup({
+require("mason-tool-installer").setup({
 	ensure_installed = {
 		"prettier",
 		"stylua",
