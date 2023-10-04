@@ -87,9 +87,6 @@ lspconfig['jsonls'].setup({
 
 -- This plugin will automatically configure dartls as well
 require('flutter-tools').setup({
-	widget_guides = {
-		enabled = true,
-	},
 	lsp = {
 		capabilities = capabilities,
 		on_attach = on_attach
