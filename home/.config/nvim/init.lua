@@ -29,7 +29,8 @@ require("lazy").setup({
 		end,
 	},
 	{ "nvim-lua/plenary.nvim" },
-	{ "tpope/vim-fugitive" },
+	{ "tpope/vim-fugitive" }, -- Thank you tpope
+	{ "tpope/vim-surround" }, -- Thank you tpope
 	{ "christoomey/vim-tmux-navigator" },
 	{
 		"nvim-tree/nvim-tree.lua",
