@@ -9,8 +9,14 @@ vim.g.maplocalleader = " "
 -- Set highlight on search
 vim.opt.hlsearch = false
 
+-- Hide current cmd
+vim.opt.showcmd = false
+
 -- Make line numbers default
-vim.wo.number = true
+vim.opt.number = true
+
+-- Disable line wrapping
+vim.opt.wrap = false
 
 -- Configure tabstop and shiftwidth
 vim.opt.tabstop = 4
@@ -40,7 +46,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.wo.signcolumn = "yes"
+vim.opt.signcolumn = "yes"
 
 -- Decrease update time
 vim.opt.updatetime = 250
