@@ -82,10 +82,6 @@ vim.fn.sign_define("DapStopped", {
 	numhl = "green",
 })
 
--- [[ Default client options ]]
--- Ignore unhandled exceptions in dart
-dap.defaults.dart.exception_breakpoints = {}
-
 -- [[ Custom plugins ]]
 require("dap-go").setup()
 
