@@ -16,10 +16,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		"projekt0n/github-nvim-theme",
+		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = function()
-			require("raphaelweis.github")
+			require("raphaelweis.gruvbox")
 		end,
 	},
 	{
