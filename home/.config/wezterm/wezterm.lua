@@ -4,6 +4,10 @@ local wezterm = require("wezterm")
 -- Convenience variables
 local act = wezterm.action
 local mux = wezterm.mux
+local primary_bg = "#282828"
+local secondary_bg = "#3c3836"
+local inactive_fg = "#928374"
+local active_fg = "#ebdbb2"
 
 -- This table will hold the configuration.
 local config = {}
@@ -22,23 +26,23 @@ end)
 
 config.color_scheme = "Gruvbox Dark (Gogh)"
 config.window_frame = {
-	active_titlebar_bg = "#3c3836",
-	inactive_titlebar_bg = "#3c3836",
+	active_titlebar_bg = secondary_bg,
+	inactive_titlebar_bg = secondary_bg,
 }
 config.window_decorations = "RESIZE"
 config.colors = {
 	tab_bar = {
 		active_tab = {
-			bg_color = "#282828",
-			fg_color = "#ebdbb2",
+			bg_color = primary_bg,
+			fg_color = active_fg,
 		},
 		inactive_tab = {
-			bg_color = "#3c3836",
-			fg_color = "#928374",
+			bg_color = secondary_bg,
+			fg_color = inactive_fg,
 		},
 		new_tab = {
-			bg_color = "#3c3836",
-			fg_color = "#928374",
+			bg_color = secondary_bg,
+			fg_color = inactive_fg,
 		},
 	},
 }
