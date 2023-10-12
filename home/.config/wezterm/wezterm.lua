@@ -1,51 +1,60 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
--- Convenience variables
+-- Set convenience locals
 local act = wezterm.action
 local mux = wezterm.mux
-local primary_bg = "#282828"
-local secondary_bg = "#3c3836"
-local inactive_fg = "#928374"
-local active_fg = "#ebdbb2"
 
 -- This table will hold the configuration.
 local config = {}
 
--- In newer versions of wezterm, use the config_builder which will
--- help provide clearer error messages
+-- Config builder for clearer error messages.
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+-- Spawn a maximized window everytime wezterm is spawned.
 wezterm.on("gui-startup", function(cmd)
 	---@diagnostic disable-next-line: unused-local
 	local tab, pane, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
 end)
 
+-- Colorscheme configuration
+local PRIMARY_BG = "#282828"
+local SECONDARY_BG = "#3c3836"
+local INACTIVE_FG = "#928374"
+local ACTIVE_FG = "#ebdbb2"
 config.color_scheme = "Gruvbox Dark (Gogh)"
-config.window_frame = {
-	active_titlebar_bg = secondary_bg,
-	inactive_titlebar_bg = secondary_bg,
-}
-config.window_decorations = "RESIZE"
 config.colors = {
 	tab_bar = {
 		active_tab = {
-			bg_color = primary_bg,
-			fg_color = active_fg,
+			bg_color = PRIMARY_BG,
+			fg_color = ACTIVE_FG,
 		},
 		inactive_tab = {
-			bg_color = secondary_bg,
-			fg_color = inactive_fg,
+			bg_color = SECONDARY_BG,
+			fg_color = INACTIVE_FG,
 		},
 		new_tab = {
-			bg_color = secondary_bg,
-			fg_color = inactive_fg,
+			bg_color = SECONDARY_BG,
+			fg_color = INACTIVE_FG,
 		},
 	},
 }
+config.window_frame = {
+	active_titlebar_bg = SECONDARY_BG,
+	inactive_titlebar_bg = SECONDARY_BG,
+}
+
+-- Window configuration
+config.window_decorations = "RESIZE" -- No window title but allow resizing.
+
+-- Font configuration
+config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" } -- This disables ligatures
+
+-- Keyboard shortcuts configuration
 config.keys = {
 	{
 		key = "w",
@@ -108,7 +117,7 @@ config.keys = {
 		action = act.AdjustPaneSize({ "Right", 5 }),
 	},
 }
-for i = 1, 8 do
+for i = 1, 9 do -- Assign keybinds for tabs 1 through 9.
 	table.insert(config.keys, {
 		key = tostring(i),
 		mods = "ALT",
