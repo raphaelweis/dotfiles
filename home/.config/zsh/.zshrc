@@ -3,10 +3,10 @@ export ZSH="$ZDOTDIR/ohmyzsh"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 ZSH_THEME="robbyrussell"
-CASE_SENSITIVE="false"
+CASE_SENSITIVE="true"
 HYPHEN_INSENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true" # this makes the git checks faster
+DISABLE_UNTRACKED_FILES_DIRTY="false" # this makes the git checks faster
 
 plugins=(git)
 
@@ -17,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 ###############################################################################
 
 #############################
-# Custom Plugins 
+# Custom Plugins
 #############################
 
 # directory to store the git repositories
@@ -48,7 +48,7 @@ fi
 source $ZSH_PLUGINS_DIR/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #######################################
-# Options 
+# Options
 #######################################
 
 # Command history config
@@ -72,7 +72,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 #######################################
-# Aliases 
+# Aliases
 #######################################
 
 alias vim='nvim'
