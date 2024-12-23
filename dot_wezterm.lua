@@ -8,7 +8,8 @@ config = {
 	window_frame = {
 		font = wezterm.font("JetBrainsMonoNL Nerd Font", { weight = "Medium" }),
 	},
-	default_domain = "WSL:Ubuntu",
+	default_domain = "local",
+	default_prog = { 'pwsh.exe' },
 	wsl_domains = {
 		{
 			name = "WSL:Ubuntu",
