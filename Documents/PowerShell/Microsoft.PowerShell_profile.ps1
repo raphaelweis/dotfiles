@@ -4,3 +4,6 @@ function Invoke-Starship-TransientFunction {
 
 Invoke-Expression (&starship init powershell)
 Enable-TransientPrompt
+
+
+if ( Test-Path '~/.inshellisense/pwsh/init.ps1' -PathType Leaf ) { . ~/.inshellisense/pwsh/init.ps1 } 
