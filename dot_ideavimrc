@@ -35,3 +35,5 @@ nnoremap <A-p> :tabprev<CR>\
 nnoremap <C-W>q :action CloseEditor<CR>
 nnoremap <leader>fm :action ReformatCode<CR>
 nnoremap <leader>ff :action GotoFile<CR>
+inoremap <C-y> :action EditorChooseLookupItem<CR>
+nnoremap <ESC> :noh<CR>
