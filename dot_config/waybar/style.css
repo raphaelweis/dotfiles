@@ -20,6 +20,16 @@ window#waybar {
   padding: 0 4px;
 }
 
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: none;
+  transition: none;
+  background-color: #3d2629;
+  border: #3d2629;
+  padding: 0 5px;
+}
+
 #workspaces button {
   border-radius: 0;
   background-color: #3d2629;
