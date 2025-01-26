@@ -13,5 +13,6 @@ return {
 				on_watch = false,
 			},
 		})
+		vim.keymap.set("n", "<leader>aa", require("chezmoi.commands").apply, {})
 	end,
 }
