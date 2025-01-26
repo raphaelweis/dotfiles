@@ -19,6 +19,12 @@ return {
 		-- Define formatters
 		formatters_by_ft = {
 			lua = { "stylua" },
+			html = { "prettier" },
+			css = { "prettier" },
+			json = { "prettier" },
+			javascript = { "prettier" },
+			typescript = { "prettier" },
+			markdown = { "prettier" },
 		},
 	},
 }

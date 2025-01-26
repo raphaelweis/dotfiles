@@ -4,15 +4,19 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-ui-select.nvim",
+		"xvzc/chezmoi.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 	config = function()
+    local telescope = require("telescope")
+
 		-- Telescope setup function
-		require("telescope").setup()
+		telescope.setup({})
 
 		-- Telescope extensions
-		require("telescope").load_extension("fzf")
-		require("telescope").load_extension("ui-select")
+		telescope.load_extension("fzf")
+		telescope.load_extension("ui-select")
+		telescope.load_extension("chezmoi")
 
 		-- Telescope keymap configuration
 		local builtin = require("telescope.builtin")
@@ -26,6 +30,7 @@ return {
 		vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 		vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 		vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
+    vim.keymap.set('n', '<leader>sc', telescope.extensions.chezmoi.find_files, { desc = "[S]earch [C]hezmoi files"})
 
 		vim.keymap.set("n", "<leader>/", function()
 			builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
