@@ -1,0 +1,56 @@
+configuration {
+  display-calc: "CAL ";
+  display-drun: "APP ";
+  display-run: "CMD";
+  location: 0;
+  show-icons: false;
+  xoffset: 0;
+  yoffset: 0;
+}
+
+@theme "/dev/null"
+* {
+  background-color: transparent;
+  border: none;
+  text-color: #9198A1;
+  font: "mono 12";
+}
+
+element {
+  padding: 0.5em;
+  spacing: 1em;
+}
+
+element selected {
+  background-color: #30363f;
+}
+
+element-icon {
+  size: 3em;
+}
+
+element-text {
+  highlight: underline #FFFFFF;
+  vertical-align: 0.5;
+}
+
+entry {
+  padding: 0.5em;
+  text-color: #FFFFFF;
+}
+
+prompt {
+  color: #010409;
+  background-color: #FF7B72;
+  padding: 0.5em;
+}
+
+listview {
+  columns: 1;
+  lines: 5;
+}
+
+window {
+  background-color: #151b23;
+  width: 50%;
+}
