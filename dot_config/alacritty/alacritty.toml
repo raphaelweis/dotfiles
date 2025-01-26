@@ -1,0 +1,21 @@
+[general]
+import = [
+  "./github_dark_default.toml"
+]
+
+[font]
+size = 14
+
+[font.normal]
+family = "JetBrainsMono NF"
+style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+opacity = 1
+
+[window.padding]
+x = 5
+y = 5
