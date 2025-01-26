@@ -1,0 +1,7 @@
+[user]
+	name = Raphaël Weis
+	email = raphael.weis.g@gmail.com
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = true
