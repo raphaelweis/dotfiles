@@ -14,6 +14,7 @@ window#waybar {
 #window,
 #pulseaudio,
 #network,
+#battery,
 #cpu,
 #memory,
 #clock {
@@ -57,14 +58,26 @@ window#waybar {
   color: #a5d6ff;
 }
 
-#cpu {
+#battery,
+#cpu,
+#memory {
   background-color: #342c19;
   color: #f2cc60;
 }
 
-#memory {
-  background-color: #342c19;
-  color: #f2cc60;
+#battery.charging, #battery.full {
+  background-color: #173322;
+  color: #7ee787;
+}
+
+#battery.warning {
+  background-color: #3d2629;
+  color: #ffc1ba;
+}
+
+#battery.critical {
+  background-color: #ff7b72;
+  color: #0d1117;
 }
 
 #keyboard-state label {

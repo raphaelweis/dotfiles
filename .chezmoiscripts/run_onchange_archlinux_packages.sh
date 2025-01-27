@@ -48,6 +48,7 @@ yay -S \
   neovim-git \
   net-tools \
   networkmanager \
+  nodejs \
   noto-fonts-emoji \
   ntfs-3g \
   nwg-look \

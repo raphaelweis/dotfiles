@@ -22,9 +22,11 @@ return {
 			html = { "prettier" },
 			css = { "prettier" },
 			json = { "prettier" },
+			jsonc = { "prettier" },
 			javascript = { "prettier" },
 			typescript = { "prettier" },
 			markdown = { "prettier" },
+			sh = { "shfmt" },
 		},
 	},
 }

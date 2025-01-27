@@ -2,15 +2,12 @@
 {
   "reload_style_on_change": true,
   "spacing": 0,
-  "modules-left": [
-    "hyprland/workspaces"
-  ],
-  "modules-center": [
-    "hyprland/window"
-  ],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "pulseaudio",
     "network",
+    "battery",
     "cpu",
     "memory",
     "keyboard-state",
@@ -21,18 +18,29 @@
     "format": "{icon}",
     "format-icons": {
       "locked": "",
-      "unlocked": ""
-    }
+      "unlocked": "",
+    },
+  },
+  "battery": {
+    "interval": 1,
+    "full-at": 99,
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{capacity}% {icon} ",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25,
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "{:%Y-%m-%d}",
   },
   "cpu": {
     "format": "{usage}%  ",
   },
   "memory": {
-    "format": "{}%  "
+    "format": "{}%  ",
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%)  ",
@@ -40,13 +48,13 @@
     "tooltip-format": "{ifname} via {gwaddr}  ",
     "format-linked": "{ifname} (No IP)  ",
     "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "{volume}%",
     "format-bluetooth": "{volume}% ",
     "format-bluetooth-muted": "  ",
     "format-muted": " ",
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
   },
 }
