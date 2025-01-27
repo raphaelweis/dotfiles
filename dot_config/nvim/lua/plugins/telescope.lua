@@ -16,7 +16,12 @@ return {
 				sorting_strategy = "ascending",
 				layout_config = { prompt_position = "top" },
 				selection_caret = "  ",
-        prompt_prefix = "   "
+				prompt_prefix = "   ",
+			},
+			extensions = {
+				["ui-select"] = {
+					require("telescope.themes").get_cursor({}),
+				},
 			},
 		})
 

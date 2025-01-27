@@ -25,6 +25,10 @@ return {
 				map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x", "v" })
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+				map("td", function()
+					local new_config = not vim.diagnostic.config().virtual_lines
+					vim.diagnostic.config({ virtual_lines = new_config })
+				end, "[T]oggle [D]iagnostic virtual lines")
 
 				local client = vim.lsp.get_client_by_id(event.data.client_id)
 				if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
@@ -86,7 +90,7 @@ return {
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua",
-      "prettier",
+			"prettier",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
