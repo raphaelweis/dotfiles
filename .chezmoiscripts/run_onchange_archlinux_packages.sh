@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -S \
+yay -S --needed \
   adwaita-qt5-git \
   adwaita-qt6-git \
   alacritty \
