@@ -12,6 +12,9 @@ Here is the `chezmoi.toml` files I use for each of my machines:
 ```
 [data.alacritty]
 font_size = 10
+
+[data.hyprland]
+gdk_scale = 2
 ```
 
 ### Desktop (archlinux)
@@ -19,5 +22,8 @@ font_size = 10
 ```
 [data.alacritty]
 font_size = 14
+
+[data.hyprland]
+gdk_scale = 1
 ```
 

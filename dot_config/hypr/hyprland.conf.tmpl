@@ -45,7 +45,7 @@ $CURSOR_THEME = macOS
 $CURSOR_SIZE = 24
 
 env = XCURSOR_THEME, $CURSOR_THEME
-env = GDK_SCALE, 2
+env = GDK_SCALE, {{ .hyprland.gdk_scale }}
 env = XCURSOR_SIZE, $CURSOR_SIZE
 
 monitor = ,highres,auto,auto
