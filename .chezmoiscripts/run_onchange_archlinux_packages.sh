@@ -29,6 +29,7 @@ yay -S --needed \
   gnome-themes-extra \
   google-java-format \
   grimblast-git \
+  hypridle \
   hyprland \
   hyprpaper \
   hyprpicker \
@@ -60,6 +61,7 @@ yay -S --needed \
   python-pip \
   qt5-wayland \
   ripgrep \
+  rofi-calc \
   rofi-wayland \
   ruby \
   sl \

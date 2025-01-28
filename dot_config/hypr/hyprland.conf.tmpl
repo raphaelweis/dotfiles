@@ -54,13 +54,14 @@ exec-once = hyprctl setcursor $CURSOR_THEME $CURSOR_SIZE
 exec-once = hyprpaper
 exec-once = waybar
 exec-once = systemctl --user start hyprpolkitagent
+exec-once = hypridle
 
 animation = workspaces, 1, 0.5, default, slide
 animation = windows, 1, 1, default, popin
 
 bind = $mod, C, killactive
 bind = $mod, M, fullscreen
-bind = CTRL ALT SHIFT, L, exit
+bind = $mod SHIFT, M, exit
 bind = $mod, H, movefocus, l
 bind = $mod, J, movefocus, d
 bind = $mod, K, movefocus, u
