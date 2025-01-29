@@ -34,6 +34,7 @@ yay -S --needed \
   hyprpaper \
   hyprpicker \
   i3status \
+  ibus \
   inetutils \
   jdk17-openjdk \
   julia \

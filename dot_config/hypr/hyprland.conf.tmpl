@@ -33,6 +33,11 @@ input {
   kb_variant = intl
 }
 
+device {
+  name = logitech-g502-1
+  sensitivity = -0.5
+}
+
 misc {
   disable_hyprland_logo = true
 }
@@ -55,7 +60,8 @@ exec-once = hyprpaper
 exec-once = waybar
 exec-once = systemctl --user start hyprpolkitagent
 exec-once = hypridle
-exec-once = executable_hyprland-bitwarden-float.sh
+exec-once = hyprland-bitwarden-float.sh
+exec-once = fcitx5
 
 animation = workspaces, 1, 0.5, default, slide
 animation = windows, 1, 1, default, popin
@@ -73,12 +79,13 @@ bind = $mod SHIFT, K, movewindoworgroup, u
 bind = $mod SHIFT, L, movewindoworgroup, r
 bind = $mod, T, togglegroup
 bind = $mod, F, togglefloating
+bind = $mod SHIFT, F, centerwindow
 bind = $mod SHIFT, E, layoutmsg, togglesplit
 bind = ALT, TAB, changegroupactive, f
 bind = $mod, P, exec, rofi -show run
 bind = ALT, SPACE, exec, rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | wl-copy"
 bind = $mod, Q, exec, firefox
-bind = $mod, RETURN, exec, alacritty
+bind = $mod, RETURN, exec, ghostty
 bind = $mod, E, exec, nautilus
 bind = $mod, F9, exec, bluetoothctl connect 88:C9:E8:AD:13:39
 bind = $mod SHIFT, S, exec, NOW=$(date +%d-%b-%Y_%H-%M-%S) && grimblast --notify --freeze copysave area $HOME/Pictures/Screenshots/screenshot_$NOW.png

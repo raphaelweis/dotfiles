@@ -20,7 +20,8 @@ vim.opt.smartcase = true
 vim.opt.showmode = false
 vim.opt.breakindent = true
 vim.opt.inccommand = "split"
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
+vim.opt.termguicolors = true
 
 -- Schedule the clipboard sync after `UiEnter` because it can increase startup time.
 vim.schedule(function()
