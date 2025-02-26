@@ -1,0 +1,21 @@
+[general]
+import = [
+  "./theme.toml"
+]
+
+[font]
+size = 8
+
+[font.normal]
+family = "JetBrainsMono NF"
+style = "Regular"
+
+[mouse]
+hide_when_typing = true
+
+[window]
+opacity = 1
+
+[window.padding]
+x = 5
+y = 5
