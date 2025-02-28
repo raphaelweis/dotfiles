@@ -25,6 +25,8 @@ vim.opt.inccommand = "split"
 vim.opt.scrolloff = 5
 vim.opt.termguicolors = true
 
+vim.diagnostic.config({ virtual_text = true })
+
 ----------
 -- Keymaps
 ----------
@@ -121,6 +123,7 @@ require("lazy").setup({
 						{ name = "nvim_lsp" },
 						{ name = "luasnip" },
 						{ name = "path" },
+						{ name = "buffer" },
 					},
 				})
 			end,
@@ -242,8 +245,10 @@ require("lazy").setup({
 						map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x", "v" })
 						map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 						map("td", function()
-							local new_config = not vim.diagnostic.config().virtual_lines
-							vim.diagnostic.config({ virtual_lines = new_config })
+							vim.diagnostic.config({
+								virtual_lines = not vim.diagnostic.config().virtual_lines,
+								virtual_text = not vim.diagnostic.config().virtual_text,
+							})
 						end, "[T]oggle [D]iagnostic virtual lines")
 
 						if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
@@ -259,6 +264,10 @@ require("lazy").setup({
 					vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 				local servers = {
+					html = {},
+					cssls = {},
+					ts_ls = {},
+					eslint = {},
 					lua_ls = {
 						settings = {
 							Lua = {
