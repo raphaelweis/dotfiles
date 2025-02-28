@@ -333,6 +333,7 @@ require("lazy").setup({
 					highlight = {
 						enable = true,
 						additional_vim_regex_highlighting = { "ruby" },
+						disable = { "latex" },
 					},
 					indent = { enable = true, disable = { "ruby" } },
 				})
@@ -368,6 +369,13 @@ require("lazy").setup({
 			config = function()
 				vim.g.gruvbox_material_foreground = "original"
 				vim.cmd.colorscheme("gruvbox-material")
+			end,
+		},
+		{
+			"lervag/vimtex",
+			lazy = false,
+			init = function()
+				vim.g.vimtex_view_method = "zathura"
 			end,
 		},
 	},
