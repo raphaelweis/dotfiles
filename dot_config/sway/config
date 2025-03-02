@@ -27,7 +27,10 @@ seat seat0 xcursor_theme $cursor_theme $cursor_size
 ### Output configuration
 #
 # set a wallpaper
-output * bg ~/Pictures/Wallpapers/the_solo_traveller_wallpaper.png fill
+output * bg ~/Pictures/Wallpapers/wallpaper.png fill
+
+output eDP-1 mode 2944x1840@60Hz
+output eDP-1 scale 2
 
 ### Input configuration
 #
@@ -51,25 +54,17 @@ input "1133:16511:Logitech_G502" {
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-# start a clipboard manager
+# start programs
 exec wl-paste -t text --watch clipman store --no-persist
+exec rfkill unblock bluetooth
 
 # remove window title borders (keep a one pixel border)
 default_border pixel 1
 smart_borders on
-font pango:JetBrainsMono NL Medium 8
+font pango:JetBrainsMono NL Medium 6
 
 # Prevent mouse from taking focus by hovering
 focus_follows_mouse no
-
-# colors
-client.focused          #00cc60 #00cc60 #000000 #00cc60   #00cc60
-client.focused_inactive #5f676a #5f676a #cccccc #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #000000 #900000   #900000
-client.placeholder      #000000 #0c0c0c #000000 #000000   #0c0c0c
-
-client.background       #ffffff
 
 ### Key bindings
 #
@@ -79,13 +74,19 @@ client.background       #ffffff
 bindsym $mod+Return exec $term
 
 # Start a web browser
-bindsym $mod+q exec firefox
+bindsym $mod+q exec zen-twilight
+
+# Start a file manager
+bindsym $mod+e exec nautilus
 
 # Kill focused window
 bindsym $mod+c kill
 
 # Start your launcher
-bindsym $mod+p exec tofi-run | xargs swaymsg exec --
+bindsym $mod+p exec wmenu-run
+
+# Pick a color from the screen
+bindsym $mod+Shift+c exec hyprpicker --format=hex --autocopy
 
 # Take a screenshot
 bindsym $mod+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && grimblast --notify --freeze copysave area $HOME/Pictures/Screenshots/screenshot_$NOW.png
@@ -98,10 +99,13 @@ bindsym $mod+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && grimblast --notify -
 floating_modifier $mod normal
 
 # Reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+F5 reload
+
+# Put system to sleep
+bindsym $mod+Shift+m exec systemctl sleep
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+m exec swaymsg exit
+bindsym $mod+Shift+Ctrl+m exec swaymsg exit
 
 #
 # XF86 controls
@@ -248,21 +252,10 @@ bindsym $mod+r mode "resize"
 bar {
 	position bottom
 
-# When the status_command prints a new line to stdout, swaybar updates.
-# The default just shows the current date and time.
-# status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    # status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 		status_command i3status
-
-		colors {
-      background #000000
-      statusline #ffffff
-      separator #666666
-
-      focused_workspace  #000000 #00cc60 #000000
-      active_workspace   #333333 #5f676a #ffffff
-      inactive_workspace #000000 #000000 #888888
-      urgent_workspace   #2f343a #900000 #ffffff
-		}
 }
 
 include /etc/sway/config.d/*

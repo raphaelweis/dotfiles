@@ -39,6 +39,20 @@ vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
 
+-----------
+-- Autocmds
+-----------
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "tex", "markdown" },
+  callback = function()
+    vim.opt_local.textwidth = 80
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true  -- Avoid breaking words in the middle
+    vim.opt_local.formatoptions:append("t")  -- Auto-wrap text while typing
+  end,
+})
+
 ----------
 -- Plugins
 ----------
