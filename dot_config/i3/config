@@ -18,6 +18,12 @@ font pango:JetBrainsMono NL Medium 8
 # Prevent mouse from taking focus by hovering
 focus_follows_mouse no
 
+### Exec on launch
+exec --no-startup-id rfkill unblock bluetooth
+exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose
+exec --no-startup-id xrandr --dpi 192
+exec --no-startup-id rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode writes
+
 ### Key bindings
 #
 # Basics:
@@ -38,16 +44,19 @@ bindsym $mod+c kill
 bindsym $mod+p exec dmenu_run
 
 # Take a screenshot
-bindsym $mod+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && mkdir -p "$HOME/Pictures/Screenshots" && path="$HOME/Pictures/Screenshots/screenshot_$NOW.png" && maim -s "$path" && xclip -selection clipboard -t image/png "$path"
+bindsym $mod+Shift+s exec --no-startup-id NOW=$(date +%d-%b-%Y_%H-%M-%S) && mkdir -p "$HOME/Pictures/Screenshots" && path="$HOME/Pictures/Screenshots/screenshot_$NOW.png" && maim -s "$path" && xclip -selection clipboard -t image/png "$path"
 
 # Pick a color
-bindsym $mod+Shift+c exec xcolor | xclip -selection clipboard
+bindsym $mod+Shift+c exec --no-startup-id xcolor | xclip -selection clipboard
 
 # Reload the configuration file
 bindsym $mod+Shift+F5 reload
 
+# Suspend
+bindsym $mod+Shift+m exec systemctl suspend
+
 # Exit i3
-bindsym $mod+Shift+m exec i3-msg exit
+bindsym $mod+Shift+Ctrl+m exec i3-msg exit
 
 #
 # XF86 controls
@@ -183,3 +192,5 @@ bar {
 	status_command i3status
 }
 
+# Window rules
+for_window [title="Android Emulator - .*"] floating enable

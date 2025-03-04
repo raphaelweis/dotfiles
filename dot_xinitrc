@@ -15,7 +15,7 @@ sysmodmap=$xinitdir/.Xmodmap
 # Set environment variables
 export MOZ_USE_XINPUT2=1
 export XCURSOR_THEME=macOS
-export XCURSOR_SIZE=24
+export XCURSOR_SIZE=48
 
 # merge in defaults and keymaps
 if [ -f $sysresources ]; then
