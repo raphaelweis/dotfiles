@@ -13,7 +13,7 @@ set $term alacritty
 # remove window title borders (keep a one pixel border)
 default_border pixel 1
 smart_borders on
-font pango:JetBrainsMono NL Medium 8
+font pango:JetBrainsMono NL Medium 16
 
 # Prevent mouse from taking focus by hovering
 focus_follows_mouse no
@@ -21,7 +21,6 @@ focus_follows_mouse no
 ### Exec on launch
 exec --no-startup-id rfkill unblock bluetooth
 exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose
-exec --no-startup-id xrandr --dpi 192
 exec --no-startup-id rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode writes
 
 ### Key bindings
@@ -188,9 +187,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
+  mode hide
+  hidden_state hide
+  modifier Mod3
 	position bottom
 	status_command i3status
 }
+
+bindsym $mod+i bar hidden_state show
+bindsym --release $mod+i bar hidden_state hide
 
 # Window rules
 for_window [title="Android Emulator - .*"] floating enable
