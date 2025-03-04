@@ -13,15 +13,17 @@ set $term alacritty
 # remove window title borders (keep a one pixel border)
 default_border pixel 1
 smart_borders on
-font pango:JetBrainsMono NL Medium 16
+font pango:JetBrainsMonoNL Nerd Font 16
 
 # Prevent mouse from taking focus by hovering
 focus_follows_mouse no
 
 ### Exec on launch
+exec --no-startup-id battery-notifier
 exec --no-startup-id rfkill unblock bluetooth
 exec --no-startup-id picom --fade-in-step=1 --fade-out-step=1 --fade-delta=0 --no-fading-openclose
 exec --no-startup-id rclone mount gdrive: ~/GoogleDrive --vfs-cache-mode writes
+exec --no-startup-id discord --start-minimized
 
 ### Key bindings
 #
@@ -40,7 +42,7 @@ bindsym $mod+e exec nautilus --new-window
 bindsym $mod+c kill
 
 # Start a launcher
-bindsym $mod+p exec dmenu_run
+bindsym $mod+p exec --no-startup-id dmenu_run -fn 'JetBrainsMonoNL Nerd Font-16'
 
 # Take a screenshot
 bindsym $mod+Shift+s exec --no-startup-id NOW=$(date +%d-%b-%Y_%H-%M-%S) && mkdir -p "$HOME/Pictures/Screenshots" && path="$HOME/Pictures/Screenshots/screenshot_$NOW.png" && maim -s "$path" && xclip -selection clipboard -t image/png "$path"
