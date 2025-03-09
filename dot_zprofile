@@ -1,9 +1,2 @@
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$HOME/.local/bin:/usr/local/texlive/2024/bin/x86_64-linux
-export ELECTRON_OZONE_PLATFORM_HINT=auto
-export GDK_SCALE=2
-export QT_SCALE_FACTOR=2
-
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec startx 
-fi

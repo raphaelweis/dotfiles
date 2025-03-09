@@ -1,6 +1,6 @@
-theme = github-dark-default
+theme = GruvboxDark
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
-background-opacity = 0.85
-gtk-titlebar = false
+gtk-titlebar-hide-when-maximized = true
+
