@@ -1,2 +1,5 @@
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$HOME/.local/bin:/usr/local/texlive/2024/bin/x86_64-linux
+
+# Created by `pipx` on 2025-03-09 10:50:25
+export PATH="$PATH:/home/raphaelw/.local/bin"

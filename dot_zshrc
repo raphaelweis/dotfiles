@@ -12,11 +12,15 @@ export FZF_ALT_C_COMMAND='fd --type d'
 export EDITOR='nvim'
 export ANDROID_HOME="$HOME/Android/Sdk"
 
-export PATH=$PATH:"$ANDROID_HOME/emulator:":"$ANDROID_HOME/cmdline-tools/latest/bin":"$ANDROID_HOME/platform-tools"
+export PATH=$PATH:"$ANDROID_HOME/emulator:":"$ANDROID_HOME/cmdline-tools/latest/bin":"$ANDROID_HOME/platform-tools":"/snap/bin"
 
 bindkey -s "^[s" "tmux-sessionizer\n"
 alias vim='nvim'
 alias ta='tmux attach'
+
+# Thinker kubernetes configuration
+export KUBECONFIG="$HOME/.kube/config:$HOME/.kube/thinker"
+source <(kubectl completion zsh)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -34,3 +38,6 @@ export PATH
 # <<< juliaup initialize <<<
 
 eval "$(starship init zsh)"
+
+# Created by `pipx` on 2025-03-09 10:50:25
+export PATH="$PATH:/home/raphaelw/.local/bin"
