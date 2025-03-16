@@ -3,4 +3,8 @@ cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 gtk-titlebar-hide-when-maximized = true
+font-size = 14
+app-notifications = no-clipboard-copy
+font-feature = -calt
+background-opacity = 1
 
