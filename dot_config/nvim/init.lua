@@ -44,13 +44,13 @@ end)
 -----------
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "tex", "markdown" },
-  callback = function()
-    vim.opt_local.textwidth = 80
-    vim.opt_local.wrap = true
-    vim.opt_local.linebreak = true  -- Avoid breaking words in the middle
-    vim.opt_local.formatoptions:append("t")  -- Auto-wrap text while typing
-  end,
+	pattern = { "tex", "markdown" },
+	callback = function()
+		vim.opt_local.textwidth = 80
+		vim.opt_local.wrap = true
+		vim.opt_local.linebreak = true -- Avoid breaking words in the middle
+		vim.opt_local.formatoptions:append("t") -- Auto-wrap text while typing
+	end,
 })
 
 ----------
@@ -175,6 +175,7 @@ require("lazy").setup({
 					typescript = { "prettier" },
 					markdown = { "prettier" },
 					sh = { "shfmt" },
+					python = { "black" },
 				},
 			},
 		},
@@ -282,6 +283,7 @@ require("lazy").setup({
 					cssls = {},
 					ts_ls = {},
 					eslint = {},
+					pyright = {},
 					lua_ls = {
 						settings = {
 							Lua = {
@@ -382,7 +384,7 @@ require("lazy").setup({
 			priority = 1000,
 			config = function()
 				vim.g.gruvbox_material_foreground = "original"
-        vim.g.gruvbox_material_transparent_background = 1
+				vim.g.gruvbox_material_transparent_background = 1
 				vim.cmd.colorscheme("gruvbox-material")
 			end,
 		},
